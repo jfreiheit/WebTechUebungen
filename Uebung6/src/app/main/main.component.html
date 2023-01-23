@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="d-grid gap-2">
+<button (click)="tableOnOff()" type="button" class="btn btn-success">{{ btnText }}</button>
+</div>
+<table class="table table-striped" *ngIf="tableShow">
+    <thead>
+        <tr>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>E-Mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let member of members">
+            <td>{{ member.forename }}</td>
+            <td>{{ member.surname }}</td>
+            <td>{{ member.email }}</td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="!tableShow">
+    <p>Tabelle nicht zu sehen</p>
+</div>
+</div>
