@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung 3</title>
+    <style>
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 1%;
+        }
+        header h1 {
+            text-transform: uppercase; 
+            font-size: 1.3em;
+        }
+
+        .mywrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 1%;
+            margin-top: 2%;
+        }
+
+        .mycard {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: grid;
+            grid-template-rows: 3fr 1fr;
+        }
+
+        .myimg {
+            background-color: antiquewhite;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .myimg img {
+            display: block;
+            height: 20%;
+            margin: auto;
+            padding-top: 40%;
+            padding-bottom: 10%;
+        }
+
+        .myname {
+            font-weight: bold;
+            text-transform: uppercase; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 700px) {
+
+            .myimg {
+                background-color: rgb(206, 243, 150);
+            }
+
+            .myimg img {
+                height: 30%;
+                padding-top: 30%;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .myimg {
+                background-color: rgb(147, 170, 162);
+            }
+
+            .myimg img {
+                height: 40%;
+                padding-top: 20%;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .myimg {
+                background-color: rgb(238, 248, 245);
+            }
+
+            .myimg img {
+                height: 50%;
+                padding-top: 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Städte</h1>
+    </header>
+    <main>
+        <section class="mywrapper">
+
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/berlin.png" alt="Berlin" />
+                </div>
+                <div class="myname">
+                    <p>Berlin</p>
+                </div>
+            </div>
+
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/bernau.png" alt="Bernau" />
+                </div>
+                <div class="myname">
+                    <p>Bernau</p>
+                </div>
+            </div>
+
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/brandenburg.png" alt="Brandenburg" />
+                </div>
+                <div class="myname">
+                    <p>Brandenburg</p>
+                </div>
+            </div>
+
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/bremen.png" alt="Bremen" />
+                </div>
+                <div class="myname">
+                    <p>Bremen</p>
+                </div>
+            </div>
+
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/bremerhaven.png" alt="Brmerhaven" />
+                </div>
+                <div class="myname">
+                    <p>Bremerhaven</p>
+                </div>
+            </div>
+            
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/madrid.png" alt="Madrid" />
+                </div>
+                <div class="myname">
+                    <p>Madrid</p>
+                </div>
+            </div>
+            
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/magdeburg.png" alt="Magdeburg" />
+                </div>
+                <div class="myname">
+                    <p>Magdeburg</p>
+                </div>
+            </div>
+            
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/mainz.png" alt="Mainz" />
+                </div>
+                <div class="myname">
+                    <p>Mainz</p>
+                </div>
+            </div>
+
+
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/mannheim.png" alt="Mannheim" />
+                </div>
+                <div class="myname">
+                    <p>Mannheim</p>
+                </div>
+            </div>
+            
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/marburg.png" alt="Marburg" />
+                </div>
+                <div class="myname">
+                    <p>Marburg</p>
+                </div>
+            </div>
+            
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/newyork.png" alt="New York" />
+                </div>
+                <div class="myname">
+                    <p>New York</p>
+                </div>
+            </div>
+            
+            <div class="mycard">
+                <div class="myimg">
+                    <img src="./images/stockholm.png" alt="Stockholm" />
+                </div>
+                <div class="myname">
+                    <p>Stockholm</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

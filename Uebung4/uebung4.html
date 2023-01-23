@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Übung 4</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Teilnehmerin Registrierung</h1>
+    
+        <form class="row g-3" onsubmit="return false;">
+
+        <div class="col-md-6">  
+            <input type="text" class="form-control" id="firstname"
+                placeholder="First name" required>
+            <div id="firstnameFeedback" class="invalid-feedback">
+                Bitte Vornamen eingeben!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
+            <div id="lastnameFeedback" class="invalid-feedback">
+                Bitte Nachnamen eingeben!
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <input type="email" class="form-control" id="email" placeholder="E-Mail" required>
+            <div id="emailFeedback" class="invalid-feedback">
+                Bitte E-Mail eingeben!
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="ipaddress" placeholder="IP-Address" required>
+            <div id="ipaddressFeedback" class="invalid-feedback">
+                Bitte IP-Adresse eingeben!
+            </div>
+        </div>
+
+        <div class="col-3">
+            <button class="btn btn-secondary" type="reset" onclick="reset()">Abbrechen</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-success" type="submit" onclick="register(event)">Registrieren</button>
+        </div>
+    </form>
+    <div class="mt-5">
+        <h4>Eingegebene Werte</h4>
+        <ul id="ul1">
+
+        </ul>
+    </div>
+    </div>
+    <script>
+        function register(event) {
+
+            // Zugriff auf die input-Felder ueber deren ids
+            // Zugriff auf die eingegebenen Werte ueber value
+            let fname = document.querySelector('#firstname').value;
+            let lname = document.querySelector('#lastname').value;
+            let email = document.querySelector('#email').value;
+            let ipadr = document.querySelector('#ipaddress').value;
+
+            // Testausgaben auf Konsole
+            console.log(fname);
+            console.log(lname);
+            console.log(email);
+            console.log(ipadr);
+
+            // Befuellen der Liste
+            // Bootstrap-Klassen list-group und list-group-item
+            let liste = document.getElementById('ul1');
+            liste.classList.add('list-group');
+  
+            liste.innerHTML = '<li class="list-group-item">Vorname : ' + fname + '</li>'
+                            + '<li class="list-group-item">Nachname : ' + lname + '</li>'
+                            + '<li class="list-group-item">E-Mail : ' + email + '</li>'
+                            + '<li class="list-group-item">IP-Adresse : ' + ipadr + '</li>';
+
+            
+            let li1 = document.createElement('li');
+            li1.classList.add("list-group-item");
+            li1.innerHTML = "Vorname : " + fname;
+            liste.appendChild(li1);
+
+             let listItems = liste.children;
+                          console.log(listItems)
+             for(let i= 0; i< listItems.length; i++)
+             {
+                console.log(listItems[i])
+             }
+
+             //listItems[0].innerHTML = "<h1>Hallo</h1>"; 
+               
+            document.querySelector('form').classList.add('was-validated');
+            // Verhindern des Neuladens der Seite
+            event.preventDefault();
+        }
+
+    </script>
+</body>
+</html>
